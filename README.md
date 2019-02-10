@@ -1,5 +1,7 @@
+You can test this application here: http://e952c67d-e115-4aff-ad22-66fe1a7500e6.pub.cloud.scaleway.com/test-madkudu/
+
 ### Technical Requirement Document for 'The Antelopes Codex' (Proof Of Concept)
-Draft 0.1
+Draft 0.2
 
 ## Objective of this POC
 
