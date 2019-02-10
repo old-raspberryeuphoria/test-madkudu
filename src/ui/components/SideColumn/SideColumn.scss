@@ -1,0 +1,46 @@
+@import 'src/assets/sass/_variables.scss';
+
+.side-column {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 15%;
+  padding: 30px;
+  border-right: 1px solid $border-color;
+
+  &--right {
+    left: initial;
+    right: 0;
+  }
+}
+
+.main-navigation {
+  > li {
+    margin-bottom: 10px;
+    font-size: 26px;
+  }
+
+  a {
+    color: $blue-light;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .inactive {
+    &:hover {
+      cursor: default;
+      text-decoration: none;
+    }
+  }
+}
+
+.sub-navigation {
+  li {
+    padding-left: 10px;
+    font-size: 16px;
+  }
+}

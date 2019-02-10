@@ -25,7 +25,7 @@ Finally, the document includes details on how to set up the project on your comp
 # The user interface must include the following:  
 
 - A table to view every antelopes on the main page. The table must display the name, the continent, the weight, the height, the hornes, and a picture of every antelope.
-- A graphical chart to show the data [WIP]  
+- A graphical chart to show the data
 - A way to change representation for the graphical chart  
 - A way to export the data as a .csv file
 
@@ -54,16 +54,17 @@ The front-end should use data from this json file: https://s3-us-west-2.amazonaw
 
 - A fixed side column of the left of the screen for navigation
 
-This column should provide the following buttons:  
-- Overview (jump to start of the page)  
-- Data (jump to anchor #data)  
-- Export (see "Export functionnality")
+This column should provide the following links:  
+- Overview  
+- Graphics  
 
-- A main column to display content
+The "Graphics" link should render a sub-list of links for every graphic available. For this POC, only one will be provided ("Horns by continents")
 
-- At the start of the main column, an overview section to show all antelopes in a table.  
+- A main column to display the current page
+
+- On the page "Overview", there should be a section dedicated to show all antelopes in a table.  
 This section should have a heading title with the text "Overview".  
-The table should have a first row with the following columns :  
+The table should have a first row with the following headings, one for each properties except picture:  
 
 - Name  
 - Continent  
@@ -71,23 +72,17 @@ The table should have a first row with the following columns :
 - Height  
 - Horns  
 
-Hovering the name should give a preview picture of the antelope, while clicking it should redirect to the real picture.  
+Clicking on a heading should sort the table by the choosen key, in ascending order if it's the first time and otherwhise in descending order.  
+By default, the table should be sorted by the key `name` in ASC order.  
 
-- Below the table, there should be a data section.  
-This section should have a heading title with the text "Data".  
-This section should have a sub-section "Filters".  
+- On the page "Horns by continents", there should be a graphic showing the repartition of horns-type per continent.  
+This section should have a heading title with the text "Antelopes horns type by continent".  
+There should be a paragraph to introduce the graphic at the start of the page.  
 
-On a first horizontal block inside this sub-section, there should be two "Select" components to let the user update the data by grouping or filtering antelopes. The default selected values should be `null` for the two selects.  
-- The first select should have the label "Group by" and the options "[Continent, Horns]", and there could be only 1 option pickable at any time  
-When selecting an option, every antelopes should be grouped under either their "continent" property or their "horns" propert.  
-- The first select should have the label "Filter by" and the options "[`ContinentsList`, `HornsList`]", where `ContinentsList` is a list of every continents extrapolated from the data, and `HornsList` is a list of every horns extrapolated from the data, and there should be multiple options pickable at anytime.  
-When selecting an option, the antelopes set should filter out the data who does not correspond to the picked option(s).  
-
-On a second horizontal block inside this sub-section, there should two "Slider" components to let the user update the data by filtering antelopes by.  
-- The first slider should have the label "Weight". The default values should be the minimum and maximum weight extrapolated from the data.  
-- The first slider should have the label "Height". The default values should be the minimum and maximum height extrapolated from the data.  
-
-Below the filters, there should be a graphical chart as vertical bars to show and compare data.  
+Each continent should be represented by a column divided by every horns-type you can find on the continent, with a label below the column.  
+A legend should be displayed at the right of the columns.  
+Each horn-type should have its own color.  
+Two buttons should be available to switch between a percentage-based or count-based display of the number of horns-types. Only one button can be pressed at the same time.  
 
 ## Project setup
 ```

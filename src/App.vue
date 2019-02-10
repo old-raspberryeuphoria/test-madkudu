@@ -1,28 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <SideColumn />
+    <MainColumnContainer />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import SideColumn from './ui/components/SideColumn/SideColumn.vue';
+import MainColumnContainer from './ui/containers/MainColumnContainer.vue';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
+    SideColumn,
+    MainColumnContainer,
   },
 };
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="scss" src="./assets/sass/main.scss"></style>
